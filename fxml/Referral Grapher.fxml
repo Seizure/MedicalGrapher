@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="200.0" prefWidth="110.0">
+         <children>
+            <VBox prefHeight="200.0" spacing="10.0">
+               <children>
+                  <TextField />
+                  <Button mnemonicParsing="false" text="Add Department" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TableView prefHeight="200.0">
+              <columns>
+                <TableColumn prefWidth="175.0" text="Department" />
+                <TableColumn prefWidth="75.0" text="Display" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="200.0" spacing="10.0">
+               <children>
+                  <TextField />
+                  <Button mnemonicParsing="false" text="Add Referral" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <TableView prefHeight="200.0">
+               <columns>
+                  <TableColumn prefWidth="175.0" text="Referral Type" />
+                  <TableColumn prefWidth="75.0" text="Display" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn prefWidth="121.0" text="Referral Type" />
+          <TableColumn prefWidth="97.0" text="Month/Year" />
+            <TableColumn prefWidth="121.0" text="# Of Referrals" />
+        </columns>
+      </TableView>
+      <VBox GridPane.columnIndex="2" GridPane.rowSpan="2">
+         <children>
+            <LineChart prefHeight="797.0" prefWidth="400.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <GridPane prefHeight="434.0" prefWidth="400.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </children>
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <DatePicker />
+            <Label text="to" />
+            <DatePicker />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="50.0" />
+         </padding>
+      </HBox>
+   </children>
+</GridPane>

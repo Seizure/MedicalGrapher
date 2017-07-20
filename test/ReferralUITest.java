@@ -8,16 +8,14 @@ import java.io.IOException;
 /**
  * Created by Jesse on 7/20/2017.
  */
-public class ReferralUI extends Stage {
+public class ReferralUITest extends Stage {
 
-    public ReferralUI(){
-
-    }
-
-    public void load() throws IOException {
-        GridPane pane = FXMLLoader.load(getClass().getResource("Referral Grapher.fxml"));
+    public ReferralUITest() throws IOException {
+           GridPane pane = FXMLLoader.load(getClass().getResource("Referral Grapher.fxml"));
 
         Scene scene = new Scene(pane, 1200, 800);
         setScene(scene);
+        show();
     }
+
 }

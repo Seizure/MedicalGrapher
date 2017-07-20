@@ -10,6 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class MedicalGraphing extends Application {
 
     private FlowPane pane = new FlowPane();
@@ -17,6 +19,10 @@ public class MedicalGraphing extends Application {
     Scene scene = new Scene(pane, 800, 500);
 
     ReferralUI refUI = new ReferralUI();
+
+    public MedicalGraphing() throws IOException {
+        refUI.load();
+    }
 
     public static void main(String[] args) {
         launch(args);
